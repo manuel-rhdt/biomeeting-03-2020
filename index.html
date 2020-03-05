@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/solarized.css">
+	<link rel="stylesheet" href="css/theme/white.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/monokai.css">
@@ -22,6 +22,22 @@
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
+
+	<style>
+		.card {
+			/* Add shadows to create the "card" effect */
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			width: 200px;
+			display: inline-block;
+			margin: 10px 30px;
+			padding: 0px;
+		}
+
+		.reveal .card img {
+			border: None;
+			margin: 0px;
+		}
+	</style>
 </head>
 
 <body>
@@ -36,27 +52,81 @@
 			</section>
 			<section data-markdown>
 				<textarea data-template>
-					## Building a theoretic Model
+					## Modeling the System
 
-					- How much noise is there in the signal?
-					$$ \Rightarrow \mathrm P(\mathbf s) $$
-					- How much noise does the sensing introduce?
-					$$ \Rightarrow \mathrm P(\mathbf x | \mathbf s) $$
+					- Cell as a data processing channel
+					- Simulate external stimuli and the cell's response to them
+				</textarea>
+			</section>
+			<section>
+				<h2>Signals and Responses</h2>
+				<em>insert a picture of signal and response trajectories</em>
+				<ul>
+					<li class="fragment">How much noise is there in the signal? $ \Rightarrow \mathrm P(\mathbf s)$</li>
+					<li class="fragment">How much noise does the sensing introduce? $\Rightarrow \mathrm P(\mathbf x |
+						\mathbf s) $</li>
+				</ul>
+			</section>
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+						## Does it work?
+	
+						_insert a picture of results for trajectories_
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Problems with the Stochastic Simulation
+	
+						- Computationally very expensive (slow)
+						- Only approximate analytical results available
+						- Difficult to check accuracy of intermediate results
+					</textarea>
+				</section>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					## Switching to a Gaussian Model
+
+					_insert a picture of gaussian samples_
+				</textarea>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					## Dig deeper
+					
+					<div class="fragment">
+
+					_insert results_
+
+					</div>
+				</textarea>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					mysterious problem ⟶ understanding the issue <br> ⟶ solution
+
+
 				</textarea>
 			</section>
 			<section>
 				<h2>Thanks</h2>
-				<table>
-					<tr>
-						<td>Pieter Rein ten Wolde</td>
-						<td>Harmen Wierenga</td>
-						<td>Mareike Berger</td>
-					</tr>
-					<tr>
-						<td>Lotte Slim</td>
-						<td>Alex Cumberworth</td>
-					</tr>
-				</table>
+				<div class="card">
+					<img src="pieter_rein.jpg" alt="Avatar" style="width:100%">
+				</div>
+				<div class="card">
+					<img src="harmen.jpg" alt="Avatar" style="width:100%">
+				</div>
+				<div class="card">
+					<img src="mareike.jpg" alt="Avatar" style="width:100%">
+				</div>
+				<div class="card">
+					<img src="lotte.jpg" alt="Avatar" style="width:100%">
+				</div>
+				<div class="card">
+					<img src="alex.jpg" alt="Avatar" style="width:100%">
+				</div>
 			</section>
 		</div>
 	</div>
